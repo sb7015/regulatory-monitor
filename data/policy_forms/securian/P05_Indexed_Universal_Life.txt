@@ -1,0 +1,56 @@
+POLICY: Indexed Universal Life Insurance (Eclipse IUL)
+POLICY NUMBER: 5 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Permanent Life — Indexed Universal Life (IUL)
+FORM NUMBER: ICC19-20204
+FILED YEAR: 2019
+STATUS: Active (Enhanced February 2025)
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Permanent life with cash value tied to market index. Flexible premiums. Adjustable death benefit. Flagship IUL product.
+
+CHARGES:
+- Cost of Insurance Charge (may increase)
+- Cash Extra Charge, Additional Agreements Charge
+- Premium Charge, Monthly Policy Charge, Policy Issue Charge
+- Transaction Charge, Index Segment Charge, Surrender Charge
+
+RISKS:
+- Policy loans/withdrawals may create adverse tax result on lapse
+- Withdrawals may be taxed within first 15 years
+- Surrender periods apply
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC19-20204
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code Chapter 1105 (Universal Life)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Must comply with Texas nonforfeiture requirements for universal life
+- Texas illustration regulation requirements apply
+- Index-linked crediting methodology must be disclosed per Texas requirements
+- Surrender charges must comply with Texas Insurance Code
+- Cost of insurance charges subject to Texas regulatory review
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC19-20204
+REGULATOR: California Department of Insurance (CDI)
+APPLICABLE LAWS: California Insurance Code, CA Bulletin 2025-8 (PBR Life Assessment)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- Must comply with California nonforfeiture requirements for universal life
+- California illustration regulation requirements apply (CDI-specific standards)
+- Subject to CDI principle-based reserving (PBR) requirements — CA Bulletin 2025-8
+- Index-linked crediting methodology must be disclosed per California requirements
+- Subject to Proposition 103 requirements (if rate-related)
+- California may impose additional consumer disclosure requirements beyond TX
+- Subject to OFAC sanctions compliance

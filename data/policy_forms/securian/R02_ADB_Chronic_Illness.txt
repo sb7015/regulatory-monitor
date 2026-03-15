@@ -1,0 +1,34 @@
+RIDER: Accelerated Death Benefit — Chronic Illness
+RIDER NUMBER: R2 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC16-20057
+FILED YEAR: 2016
+STATUS: Active
+ATTACHES TO: Select permanent life products
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Access death benefit for qualifying chronic illness. LTC funding alternative. Tax treatment per IRC Section 7702B. Reduces remaining death benefit.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC16-20057
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Must comply with Texas long-term care/chronic illness benefit regulations
+- Texas definition of chronic illness qualification must match TDI standards
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC16-20057
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Must comply with California long-term care regulatory requirements (more extensive than TX)
+- California Partnership for Long-Term Care requirements may apply
+- Subject to OFAC sanctions compliance

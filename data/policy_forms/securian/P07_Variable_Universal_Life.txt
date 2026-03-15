@@ -1,0 +1,44 @@
+POLICY: Variable Universal Life Insurance (Premier VUL)
+POLICY NUMBER: 7 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Variable Life Insurance
+FORM NUMBER: ICC22-20258
+FILED YEAR: 2022
+STATUS: Active (SEC prospectus filed May 2025)
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Life insurance with investment component via separate accounts. Subject to market risk including loss of principal. SEC-registered — prospectus required. Dual regulated (insurance + securities).
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC22-20258
+REGULATOR (INSURANCE): Texas Department of Insurance (TDI)
+REGULATOR (SECURITIES): Texas State Securities Board
+APPLICABLE LAWS: Texas Insurance Code Chapter 1106 (Variable Life), Texas Securities Act
+TX REQUIREMENTS:
+- Filed and approved by TDI (insurance) and Texas State Securities Board (securities)
+- Prospectus must be delivered before or at time of sale in Texas
+- Agents must hold Texas life license AND FINRA Series 6 or 7
+- Subject to Texas suitability requirements for variable products
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC22-20258
+REGULATOR (INSURANCE): California Department of Insurance (CDI)
+REGULATOR (SECURITIES): California Department of Financial Protection and Innovation (DFPI)
+APPLICABLE LAWS: California Insurance Code (variable life), California Corporate Securities Law
+CA REQUIREMENTS:
+- Filed and approved by CDI (insurance) and California DFPI (securities)
+- Prospectus must be delivered before or at time of sale in California
+- California suitability requirements may be more stringent than TX
+- Agents must hold California life license AND FINRA registration
+- Subject to CDI principle-based reserving requirements
+- California may impose additional investor protection disclosures beyond TX
+- Subject to OFAC sanctions compliance

@@ -1,0 +1,34 @@
+RIDER: Early Values Agreement
+RIDER NUMBER: R7 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC13-939
+FILED YEAR: 2013
+STATUS: Active
+ATTACHES TO: Permanent life products with surrender charges
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Avoids surrender charges. Flexibility to withdraw funds at any time without penalty.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC13-939
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Early values terms must comply with Texas Insurance Code
+- Texas nonforfeiture implications must be addressed
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC13-939
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Early values terms must comply with California Insurance Code
+- California may require additional disclosure about trade-off between surrender charge waiver and other features
+- Subject to OFAC sanctions compliance

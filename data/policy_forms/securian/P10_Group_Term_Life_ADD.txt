@@ -1,0 +1,52 @@
+POLICY: Group Term Life and AD&D Insurance
+POLICY NUMBER: 10 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Group Term Life with Accidental Death and Dismemberment
+FORM NUMBER: 20-12345 and 22-12345
+FILED YEAR: 2020 / 2022
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Employer-based group term life with integrated AD&D. Basic (1x salary, max $500K) + supplemental (up to 8x, max $2M). Spouse, child, voluntary AD&D options. Age reduction at 70 (65%) and 80 (50%).
+
+AD&D LOSS SCHEDULE:
+- Both hands/feet or sight of both eyes: 100%
+- One hand and one foot: 100%
+- One hand/foot or sight of one eye: 50%
+- Thumb and index finger same hand: 25%
+- Loss must occur within 200 days of accident
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATIONS: TX state variations of 20-12345 and 22-12345
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code Chapter 1131 (Group Life)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Group conversion rights must comply with Texas Insurance Code
+- Texas continuation requirements apply when employee loses coverage
+- Texas fraud statement on claim forms
+- ERISA preemption may apply for employer-sponsored plans
+- Texas does NOT require domestic partner coverage — domestic partner provisions are employer-optional in TX
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATIONS: CA state variations of 20-12345 and 22-12345
+REGULATOR: California Department of Insurance (CDI)
+APPLICABLE LAWS: California Insurance Code, Section 10121.7 (Domestic Partner Coverage)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- Group conversion rights must comply with California Insurance Code
+- California continuation requirements apply (Cal-COBRA)
+- California fraud statement on claim forms
+- California REQUIRES domestic partner coverage equal to spousal coverage (CA-specific, NOT required in TX)
+- ERISA preemption may apply
+- California may impose additional employee notification requirements beyond TX
+- Subject to OFAC sanctions compliance

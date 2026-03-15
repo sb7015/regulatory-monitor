@@ -1,0 +1,41 @@
+POLICY: Whole Life Insurance
+POLICY NUMBER: 8 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Permanent Life — Whole Life
+FORM NUMBER: ICC18-20149 and ICC18-20150
+FILED YEAR: 2018
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Traditional permanent life. Level premiums for life. Guaranteed cash value and death benefit. Two form variants.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATIONS: TX state variations of ICC18-20149 and ICC18-20150
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code Chapter 1105, Texas Standard Nonforfeiture Law
+TX REQUIREMENTS:
+- Must include Texas standard nonforfeiture values
+- Texas illustration regulation requirements apply
+- Dividend illustrations must comply with Texas standards
+- Policy loan provisions must comply with Texas Insurance Code
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATIONS: CA state variations of ICC18-20149 and ICC18-20150
+REGULATOR: California Department of Insurance (CDI)
+APPLICABLE LAWS: California Insurance Code, California Standard Nonforfeiture Law
+CA REQUIREMENTS:
+- Must include California standard nonforfeiture values
+- California illustration regulation requirements apply (CDI-specific)
+- Subject to CDI principle-based reserving (PBR) — CA Bulletin 2025-9 may apply if LTC rider attached
+- Dividend illustrations must comply with California standards
+- Policy loan provisions must comply with California Insurance Code
+- Subject to OFAC sanctions compliance

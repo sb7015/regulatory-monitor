@@ -1,0 +1,40 @@
+POLICY: MyLife Select Term Life Insurance
+POLICY NUMBER: 2 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Individual Term Life (Select)
+FORM NUMBER: ICC13-50780
+FILED YEAR: 2013
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Term life to lock in insurability. Choice of coverage periods. Conversion to permanent product available.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC13-50780
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Texas 30-day free look period
+- 2-year contestability (extendable for fraud)
+- Texas fraud statement on claim forms
+- Conversion options must comply with Texas conversion law
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC13-50780
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- California 30-day free look period
+- 2-year contestability (extendable for fraud)
+- California fraud statement on claim forms
+- Conversion options must comply with California conversion requirements
+- Subject to OFAC sanctions compliance

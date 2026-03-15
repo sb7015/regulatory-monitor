@@ -1,0 +1,38 @@
+POLICY: Securian Life Term Insurance
+POLICY NUMBER: 3 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Individual Term Life
+FORM NUMBER: SL-13-470 (Securian Life entity-specific form)
+FILED YEAR: 2013
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Low-cost life insurance with renewable premiums up to ten years. SL-prefix denotes Securian Life Insurance Company entity-specific form.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of SL-13-470
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Texas 30-day free look period
+- 2-year contestability (extendable for fraud)
+- Renewable term provisions must comply with Texas Insurance Code
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of SL-13-470
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- California 30-day free look period
+- 2-year contestability (extendable for fraud)
+- Renewable term provisions must comply with California Insurance Code
+- Subject to OFAC sanctions compliance

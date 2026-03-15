@@ -1,0 +1,42 @@
+POLICY: Group Universal Life Insurance (GUL)
+POLICY NUMBER: 11 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Group Universal Life
+FORM NUMBER: 14-32100 (SL — Securian Life entity-specific form)
+FILED YEAR: 2014
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Employer-sponsored permanent universal life. Cash value accumulation. Flexible premiums. Portable — continues after employment ends.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of 14-32100 (SL)
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code Chapter 1105 (Universal Life) + Chapter 1131 (Group Life)
+TX REQUIREMENTS:
+- Must comply with both group insurance AND universal life regulations in Texas
+- Texas nonforfeiture requirements apply to universal life component
+- Portability provisions must comply with Texas continuation law
+- Texas illustration regulation requirements apply
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of 14-32100 (SL)
+REGULATOR: California Department of Insurance (CDI)
+APPLICABLE LAWS: California Insurance Code (group life + universal life)
+CA REQUIREMENTS:
+- Must comply with both group insurance AND universal life regulations in California
+- California nonforfeiture requirements apply
+- Portability must comply with California continuation law (Cal-COBRA)
+- Subject to CDI principle-based reserving (PBR)
+- California REQUIRES domestic partner coverage equal to spousal coverage (CA-specific, NOT required in TX)
+- Subject to SB 263 annuity suitability requirements if GUL has annuity-like features
+- Subject to OFAC sanctions compliance

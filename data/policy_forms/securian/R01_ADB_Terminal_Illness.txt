@@ -1,0 +1,37 @@
+RIDER: Accelerated Death Benefit — Terminal Illness
+RIDER NUMBER: R1 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC16-20058
+FILED YEAR: 2016
+STATUS: Active
+ATTACHES TO: All individual and group life products
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Access portion of death benefit upon terminal illness diagnosis. Voluntary. Min $10K benefit eligible. Partial acceleration allowed (remaining must be $25K+).
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC16-20058
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code Chapter 1111 (Accelerated Life Insurance Benefits)
+TX REQUIREMENTS:
+- Must comply with Texas accelerated benefit disclosure requirements
+- Texas defines terminal illness qualification criteria
+- Tax implications disclosure required per Texas law
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC16-20058
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Must comply with California accelerated benefit disclosure requirements
+- California may define terminal illness criteria differently than TX
+- California consumer protection disclosures may be more extensive than TX
+- Subject to OFAC sanctions compliance

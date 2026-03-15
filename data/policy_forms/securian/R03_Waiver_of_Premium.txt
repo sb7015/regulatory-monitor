@@ -1,0 +1,34 @@
+RIDER: Waiver of Premium Agreement
+RIDER NUMBER: R3 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC15-20040
+FILED YEAR: 2015
+STATUS: Active
+ATTACHES TO: Individual and group life products
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Waives premiums during qualifying total disability. Maintains policy in force. Elimination period applies.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC15-20040
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Texas definition of total disability must comply with Texas Insurance Code
+- Elimination period must meet Texas standards
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC15-20040
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- California definition of total disability must comply with California Insurance Code
+- Elimination period must meet California standards (may differ from TX)
+- Subject to OFAC sanctions compliance

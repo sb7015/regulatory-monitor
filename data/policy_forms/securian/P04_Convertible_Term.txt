@@ -1,0 +1,36 @@
+POLICY: Convertible Term Life Insurance
+POLICY NUMBER: 4 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Individual Term Life (Convertible)
+FORM NUMBER: SL-13-460 (Securian Life entity-specific form)
+FILED YEAR: 2013
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Term life with conversion privileges to any permanent product in Securian portfolio. SL-prefix denotes Securian Life entity form.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of SL-13-460
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Conversion window and terms must comply with Texas Insurance Code
+- Converted policy must meet Texas nonforfeiture requirements
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of SL-13-460
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- Conversion window must comply with California Insurance Code
+- Converted policy must meet California nonforfeiture requirements
+- Subject to OFAC sanctions compliance

@@ -1,0 +1,39 @@
+POLICY: Survivorship Indexed Universal Life Insurance
+POLICY NUMBER: 6 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Permanent Life — Survivorship (Second-to-Die) IUL
+FORM NUMBER: ICC19-20202
+FILED YEAR: 2019
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Covers two insured lives. Death benefit paid on second death. Estate planning and wealth transfer tool.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC19-20202
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Survivorship policies subject to Texas disclosure requirements for joint life
+- Must comply with Texas nonforfeiture requirements
+- Texas illustration regulation requirements apply
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC19-20202
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- Survivorship policies subject to California disclosure requirements for joint life
+- Must comply with California nonforfeiture requirements
+- Subject to CDI principle-based reserving (PBR) requirements
+- California community property laws may affect policy ownership and beneficiary designations
+- Subject to OFAC sanctions compliance

@@ -1,0 +1,33 @@
+RIDER: Guaranteed Insurability Option Agreement
+RIDER NUMBER: R5 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC09-915 and SL-09-915.31 (Securian Life entity-specific)
+FILED YEAR: 2009
+STATUS: Active
+ATTACHES TO: Individual life products
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Purchase additional coverage at future dates without evidence of insurability. Protects against future health changes.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC09-915
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- GIO exercise dates and amounts must comply with Texas Insurance Code
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC09-915
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- GIO exercise dates and amounts must comply with California Insurance Code
+- California may have different maximum exercise amounts or age limits than TX
+- Subject to OFAC sanctions compliance

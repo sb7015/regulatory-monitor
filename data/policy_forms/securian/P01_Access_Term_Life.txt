@@ -1,0 +1,52 @@
+POLICY: Access Term Life Insurance
+POLICY NUMBER: 1 of 11
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+PRODUCT TYPE: Individual Term Life
+FORM NUMBER: ICC23-51448
+FILED YEAR: 2023
+STATUS: Active
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Affordable term life coverage for a set period with level premiums. No cash value. Conversion option to permanent policy. Accelerated and traditional underwriting available. eApp supported.
+
+KEY FEATURES:
+- Level premiums for selected term period
+- Conversion option to permanent life insurance
+- Accelerated underwriting available
+- Death benefit paid to beneficiary upon insured's death
+- No cash value or surrender charges (term product)
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC23-51448
+REGULATOR: Texas Department of Insurance (TDI)
+APPLICABLE LAWS: Texas Insurance Code, 28 Texas Administrative Code Part 1
+TX REQUIREMENTS:
+- Filed and approved by TDI
+- Texas 30-day free look period
+- 2-year contestability (extendable for fraud)
+- Texas fraud statement required on claim forms
+- Subject to Texas continuation and conversion requirements
+- Subject to OFAC sanctions compliance
+- Subject to TDI market conduct examinations
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC23-51448
+REGULATOR: California Department of Insurance (CDI)
+APPLICABLE LAWS: California Insurance Code, California Code of Regulations Title 10
+CA REQUIREMENTS:
+- Filed and approved by CDI
+- California 30-day free look period
+- 2-year contestability (extendable for fraud)
+- California fraud statement required on claim forms
+- Subject to California continuation and conversion requirements
+- Subject to Proposition 103 requirements (if rate-related)
+- Subject to OFAC sanctions compliance
+- Subject to CDI market conduct examinations

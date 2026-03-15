@@ -1,0 +1,34 @@
+RIDER: Overloan Protection Agreement
+RIDER NUMBER: R6 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: ICC16-20081
+FILED YEAR: 2016
+STATUS: Active
+ATTACHES TO: Permanent life products with cash value and loan provisions
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Prevents policy lapse when outstanding loans approach cash value. Protects against adverse tax event from over-leveraged policy.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of ICC16-20081
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Overloan trigger point must comply with Texas Insurance Code
+- Tax disclosure requirements per Texas law
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of ICC16-20081
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Overloan trigger point must comply with California Insurance Code
+- California consumer disclosures may require more detailed tax consequence explanation than TX
+- Subject to OFAC sanctions compliance

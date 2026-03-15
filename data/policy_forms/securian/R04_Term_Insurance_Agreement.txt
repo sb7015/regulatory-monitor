@@ -1,0 +1,34 @@
+RIDER: Term Insurance Agreement
+RIDER NUMBER: R4 of 7
+COMPANY: Securian Life Insurance Company
+NAIC CODE: 93742
+FORM NUMBER: SL-09-944.31 (Securian Life entity-specific)
+FILED YEAR: 2009
+STATUS: Active
+ATTACHES TO: Permanent life products
+APPLICABLE STATES: Texas (TX), California (CA)
+
+DESCRIPTION:
+Adds term life coverage to a permanent policy at lower cost than increasing permanent coverage.
+
+========================================
+TEXAS (TX) COMPLIANCE
+========================================
+STATE: Texas
+FORM VARIATION: TX state variation of SL-09-944.31
+REGULATOR: Texas Department of Insurance (TDI)
+TX REQUIREMENTS:
+- Term rider provisions must comply with Texas Insurance Code
+- Must be clearly disclosed as term (temporary) additional coverage
+- Subject to OFAC sanctions compliance
+
+========================================
+CALIFORNIA (CA) COMPLIANCE
+========================================
+STATE: California
+FORM VARIATION: CA state variation of SL-09-944.31
+REGULATOR: California Department of Insurance (CDI)
+CA REQUIREMENTS:
+- Term rider provisions must comply with California Insurance Code
+- California disclosure requirements may require additional explanation of term vs permanent component
+- Subject to OFAC sanctions compliance
