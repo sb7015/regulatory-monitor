@@ -5,6 +5,6 @@ build:
     build:
       - pip install -r requirements.txt
 run:
-  command: python -m streamlit run dashboard/app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true
+  command: streamlit run dashboard/app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
   network:
     port: 8080
