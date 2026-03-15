@@ -7,6 +7,6 @@ build:
 run:
   pre-run:
     - pip3 install -r requirements.txt
-  command: python3 -m streamlit run dashboard/app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false --server.enableWebsocketCompression false --server.enableCORS false --server.enableXsrfProtection false
+  command: python3 -m streamlit run dashboard/app.py
   network:
     port: 8080
