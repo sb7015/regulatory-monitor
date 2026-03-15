@@ -1,10 +1,12 @@
 version: 1.0
-runtime: python312
+runtime: python311
 build:
   commands:
     build:
-      - pip install -r requirements.txt
+      - pip3 install -r requirements.txt
 run:
-  command: streamlit run dashboard/app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
+  pre-run:
+    - pip3 install -r requirements.txt
+  command: python3 -m streamlit run dashboard/app.py --server.port 8080 --server.address 0.0.0.0 --server.headless true --browser.gatherUsageStats false
   network:
     port: 8080
