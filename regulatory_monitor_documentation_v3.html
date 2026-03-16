@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regulatory Change Monitor Agent — Technical Documentation</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=IBM+Plex+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1A1F36;
+  --dark-blue: #1E2761;
+  --mid-blue: #2D4A8C;
+  --accent: #3B82F6;
+  --green: #10B981;
+  --orange: #EA580C;
+  --red: #DC2626;
+  --purple: #8B5CF6;
+  --teal: #0D9488;
+  --bg: #F8FAFC;
+  --card: #FFFFFF;
+  --text: #1E293B;
+  --muted: #64748B;
+  --light: #94A3B8;
+  --border: #E2E8F0;
+  --code-bg: #0F172A;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'IBM Plex Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+.hero { background: linear-gradient(135deg, var(--navy) 0%, var(--dark-blue) 50%, var(--mid-blue) 100%); color: white; padding: 3.5rem 0 3rem; position: relative; overflow: hidden; }
+.hero::after { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--accent), var(--green), var(--purple)); }
+.hero-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+.hero-badge { display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: var(--accent); font-size: 0.75rem; font-weight: 600; padding: 0.3rem 0.8rem; border-radius: 20px; letter-spacing: 0.5px; margin-bottom: 1rem; text-transform: uppercase; }
+.hero h1 { font-family: 'DM Serif Display', serif; font-size: 2.6rem; font-weight: 400; margin-bottom: 0.5rem; line-height: 1.2; }
+.hero .subtitle { font-size: 1.1rem; color: #94A3B8; font-weight: 300; margin-bottom: 1.5rem; }
+.hero-meta { display: flex; gap: 2rem; font-size: 0.8rem; color: #64748B; flex-wrap: wrap; }
+.hero-meta span { display: flex; align-items: center; gap: 0.4rem; }
+
+.toc { background: var(--card); border-bottom: 1px solid var(--border); position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+.toc-inner { max-width: 1100px; margin: 0 auto; padding: 0 2rem; display: flex; overflow-x: auto; gap: 0; }
+.toc a { display: block; padding: 0.8rem 1rem; font-size: 0.78rem; font-weight: 500; color: var(--muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.toc a:hover { color: var(--accent); border-bottom-color: var(--accent); }
+
+.content { max-width: 1100px; margin: 0 auto; padding: 2rem; }
+
+.section { margin-bottom: 3rem; }
+.section-header { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1.5rem; padding-bottom: 0.8rem; border-bottom: 2px solid var(--border); }
+.section-num { background: var(--accent); color: white; width: 2rem; height: 2rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.85rem; font-weight: 700; flex-shrink: 0; }
+.section-num.green { background: var(--green); }
+.section-num.purple { background: var(--purple); }
+.section-num.orange { background: var(--orange); }
+.section-num.red { background: var(--red); }
+.section-num.teal { background: var(--teal); }
+.section h2 { font-family: 'DM Serif Display', serif; font-size: 1.65rem; font-weight: 400; }
+
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.5rem; margin-bottom: 1.2rem; }
+.card-header { font-size: 0.95rem; font-weight: 600; color: var(--navy); margin-bottom: 0.6rem; display: flex; align-items: center; gap: 0.5rem; }
+.card-header .tag { font-size: 0.65rem; font-weight: 600; padding: 0.15rem 0.5rem; border-radius: 4px; color: white; text-transform: uppercase; letter-spacing: 0.5px; }
+.tag-blue { background: var(--accent); }
+.tag-green { background: var(--green); }
+.tag-purple { background: var(--purple); }
+.tag-orange { background: var(--orange); }
+.tag-red { background: var(--red); }
+.tag-teal { background: var(--teal); }
+.tag-demo { background: #F59E0B; }
+
+.card p, .card li { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+.card ul, .card ol { padding-left: 1.2rem; }
+.card li { margin-bottom: 0.3rem; }
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; }
+@media (max-width: 768px) { .grid-2 { grid-template-columns: 1fr; } }
+
+.code-block { background: var(--code-bg); color: #E2E8F0; border-radius: 8px; padding: 1.2rem 1.5rem; font-family: 'IBM Plex Mono', monospace; font-size: 0.8rem; line-height: 1.8; overflow-x: auto; margin: 0.8rem 0 1rem; }
+.code-block .comment { color: #64748B; }
+.code-block .keyword { color: #7DD3FC; }
+code { background: #EEF2FF; color: var(--accent); padding: 0.15rem 0.4rem; border-radius: 4px; font-family: 'IBM Plex Mono', monospace; font-size: 0.82rem; }
+
+.flow { display: flex; align-items: center; gap: 0; flex-wrap: wrap; margin: 1rem 0; justify-content: center; }
+.flow-step { background: var(--card); border: 2px solid var(--border); border-radius: 8px; padding: 0.6rem 1rem; text-align: center; min-width: 120px; }
+.flow-step .num { font-size: 1.4rem; font-weight: 700; }
+.flow-step .label { font-size: 0.72rem; color: var(--muted); }
+.flow-arrow { font-size: 1.2rem; color: var(--light); padding: 0 0.3rem; }
+.flow-step.active { border-color: var(--accent); background: #EFF6FF; }
+.flow-step.green { border-color: var(--green); }
+.flow-step.purple { border-color: var(--purple); }
+
+.doc-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0.8rem 0; }
+.doc-table th { background: var(--navy); color: white; padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.doc-table td { padding: 0.55rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--muted); }
+.doc-table tr:nth-child(even) { background: #F8FAFC; }
+.doc-table td:first-child { font-weight: 500; color: var(--text); }
+
+.sample-table { width: 100%; border-collapse: collapse; font-size: 0.78rem; margin: 0.8rem 0; }
+.sample-table th { background: var(--accent); color: white; padding: 0.5rem 0.6rem; text-align: left; font-weight: 600; }
+.sample-table td { padding: 0.45rem 0.6rem; border-bottom: 1px solid var(--border); color: var(--muted); font-size: 0.76rem; }
+.sample-table tr:nth-child(even) { background: #F8FAFC; }
+
+.sample-table-green th { background: var(--green); }
+.sample-table-purple th { background: var(--purple); }
+.sample-table-orange th { background: var(--orange); }
+
+.agent-card { border-left: 4px solid var(--accent); padding: 1.2rem 1.5rem; margin-bottom: 1.5rem; background: var(--card); border-radius: 0 8px 8px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+.agent-card.no-ai { border-left-color: var(--muted); }
+.agent-card.green { border-left-color: var(--green); }
+.agent-card.purple { border-left-color: var(--purple); }
+.agent-card h3 { font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; display: flex; align-items: center; gap: 0.5rem; }
+.agent-card p { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.4rem; }
+
+.callout { background: #EFF6FF; border-left: 4px solid var(--accent); padding: 1rem 1.2rem; border-radius: 0 8px 8px 0; margin: 1rem 0; }
+.callout.green { background: #ECFDF5; border-left-color: var(--green); }
+.callout.orange { background: #FFF7ED; border-left-color: var(--orange); }
+.callout.amber { background: #FFFBEB; border-left-color: #F59E0B; }
+.callout p { font-size: 0.85rem; color: var(--muted); }
+.callout strong { color: var(--text); }
+
+.sev-table { width: 100%; border-collapse: collapse; font-size: 0.82rem; margin: 0.8rem 0; }
+.sev-table th { padding: 0.6rem 0.8rem; text-align: left; font-weight: 600; font-size: 0.75rem; border-bottom: 2px solid var(--border); color: var(--navy); }
+.sev-table td { padding: 0.65rem 0.8rem; border-bottom: 1px solid var(--border); color: var(--muted); vertical-align: top; }
+.sev-badge { display: inline-block; padding: 0.15rem 0.6rem; border-radius: 4px; color: white; font-weight: 600; font-size: 0.75rem; }
+.sev-critical { background: var(--red); }
+.sev-high { background: var(--orange); }
+.sev-medium { background: var(--accent); }
+.sev-low { background: var(--light); }
+
+.footer { background: var(--navy); color: #64748B; padding: 2rem 0; text-align: center; font-size: 0.78rem; margin-top: 3rem; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+<div class="hero-inner">
+<div class="hero-badge">Technical Documentation</div>
+<h1>Regulatory Change Monitor Agent</h1>
+<div class="subtitle">Complete system architecture, data pipeline, agent design, and dashboard reference</div>
+<div class="hero-meta">
+<span>🏛️ US Life Insurance</span>
+<span>📍 Texas + California</span>
+<span>📅 5-year analysis: Mar 2021–2026</span>
+<span>🤖 Claude Sonnet 4 + ChromaDB</span>
+</div>
+</div>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="toc">
+<div class="toc-inner">
+<a href="#overview">Overview</a>
+<a href="#policies">Policy Files</a>
+<a href="#chromadb">ChromaDB Indexing</a>
+<a href="#severity">Severity Classification</a>
+<a href="#agents">5 Agents & Data Flow</a>
+<a href="#dashboard">Dashboard</a>
+</div>
+</div>
+
+<div class="content">
+
+<!-- 1. SYSTEM OVERVIEW -->
+<div class="section" id="overview">
+<div class="section-header">
+<div class="section-num">1</div>
+<h2>System Overview</h2>
+</div>
+
+<p style="font-size:0.92rem; color:var(--muted); margin-bottom:1.2rem;">The Regulatory Change Monitor Agent is an AI-powered system that automatically tracks, classifies, and analyzes US life insurance regulatory changes for a specific insurance carrier. It monitors federal and state-level sources, determines which regulations are relevant to the carrier's products, maps impacts to specific policy forms, and generates compliance memos with state-specific action items.</p>
+
+<div class="flow">
+<div class="flow-step"><div class="num" style="color:var(--accent)">3,533</div><div class="label">Scraped</div></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step active"><div class="num" style="color:var(--accent)">415</div><div class="label">Relevant</div></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step green"><div class="num" style="color:var(--green)">880</div><div class="label">Policy Impacts</div></div>
+<div class="flow-arrow">→</div>
+<div class="flow-step purple"><div class="num" style="color:var(--purple)">181</div><div class="label">Memos</div></div>
+</div>
+
+<div class="card">
+<div class="card-header">How It Works — End to End</div>
+<p><strong>Step 1 — Scraping:</strong> The <strong>Crawl Agent</strong> orchestrates 4 scrapers to fetch regulatory data from Federal Register API, Texas Department of Insurance (TDI), California Department of Insurance (CDI), and OFAC SDN list. All scraped data is stored in a SQLite database.</p>
+<p style="margin-top:0.5rem"><strong>Step 2 — Deduplication:</strong> The <strong>Compare Agent</strong> checks each scraped item against existing database records using unique source IDs. Duplicates are skipped, only new items are stored.</p>
+<p style="margin-top:0.5rem"><strong>Step 3 — Classification:</strong> The <strong>Filter Agent</strong> sends each regulation to Claude AI, which classifies whether it's relevant to life insurance, assigns a severity (critical/high/medium/low), and determines which state it applies to (TX/CA/BOTH).</p>
+<p style="margin-top:0.5rem"><strong>Step 4 — Impact Mapping:</strong> The <strong>Impact Agent</strong> takes the relevant regulations and searches ChromaDB (which contains all carrier policy documents indexed as vectors) to find which specific policies are affected.</p>
+<p style="margin-top:0.5rem"><strong>Step 5 — Memo Generation:</strong> The <strong>Draft Agent</strong> generates a full compliance memo for each regulation that has policy impacts, including separate TX and CA action items, deadlines, and recommended next steps.</p>
+<p style="margin-top:0.5rem"><strong>Step 6 — Dashboard:</strong> A Streamlit dashboard with 5 pages visualizes all results. The dashboard reads from the pre-computed SQLite database. No AI calls are made at dashboard time.</p>
+</div>
+</div>
+
+<!-- 2. POLICY FILES -->
+<div class="section" id="policies">
+<div class="section-header">
+<div class="section-num green">2</div>
+<h2>Policy Files — How They Are Created & Structured</h2>
+</div>
+
+<div class="callout amber">
+<p><strong>Demo Note:</strong> For this POC demonstration, the 18 policy documents were generated with the help of an LLM (Claude AI) based on publicly available information about life insurance product types, standard regulatory requirements, and TX/CA compliance obligations. The product types, regulatory requirements, and compliance sections are accurate to the industry — but the specific product names and form numbers are representative, not sourced from the carrier's actual filed documents.</p>
+</div>
+
+<div class="card">
+<div class="card-header">How Policy Files Would Be Sourced in a Real Engagement</div>
+<p>In a real client engagement, the policy documents would come from two authoritative sources:</p>
+<ul>
+<li><strong>Source 1: SERFF Filing Access (Public)</strong> — The NAIC's System for Electronic Rate and Form Filing provides free public access to all filed policy forms. You search by company name or NAIC code, select "Life" business type, and download the filed form PDFs. For this carrier, a SERFF search returned 51 filings in Texas alone — each containing the actual approved policy form PDFs with real form numbers, exact legal language, and state-specific variations.</li>
+<li><strong>Source 2: Carrier's Internal Document Repository</strong> — The carrier's compliance/legal team provides their current policy forms directly from their document management system (SharePoint, internal DMS, or policy administration system). These are the master copies with the most current endorsements and amendments.</li>
+</ul>
+<p style="margin-top:0.5rem">Once real policy PDFs are obtained from either source, they would be processed using AI Document Intelligence (OCR + extraction) to convert them into the structured text format the system requires. The rest of the pipeline (ChromaDB indexing, agents, dashboard) works identically — only the input policy files change.</p>
+</div>
+
+<div class="card">
+<div class="card-header">Policy File Structure</div>
+<p>Each policy file is a structured text document with three sections:</p>
+<ul>
+<li><strong>GENERAL section:</strong> Product description, face amounts, available terms, features, conversion privileges, beneficiary provisions — information common to all states</li>
+<li><strong>TEXAS (TX) section:</strong> TX-specific compliance requirements — TDI filing details, TX free look periods, TX nonforfeiture standards, TX State Securities Board requirements (for variable products)</li>
+<li><strong>CALIFORNIA (CA) section:</strong> CA-specific compliance requirements — CDI filing details, Proposition 103 rate review, domestic partner provisions, Cal-COBRA requirements, SB 263 annuity suitability rules</li>
+</ul>
+<p style="margin-top:0.5rem">This three-section structure is critical — it allows the Impact Agent to determine not just which policy is affected, but which <em>state-specific section</em> of that policy needs attention.</p>
+</div>
+
+<div class="card">
+<div class="card-header">All 18 Policies Monitored <span class="tag tag-demo">Generated for Demo</span></div>
+<table class="doc-table">
+<tr><th>ID</th><th>Policy Name</th><th>Form Number</th><th>Type</th><th>Note</th></tr>
+<tr><td>P01</td><td>Access Term Life Insurance</td><td>ICC23-51448</td><td>Individual Term</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P02</td><td>MyLife Select Term Life Insurance</td><td>ICC13-50780</td><td>Individual Term</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P03</td><td>Securian Life Term Insurance</td><td>SL-13-470</td><td>Individual Term</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P04</td><td>Convertible Securian Life Term</td><td>SL-13-460</td><td>Individual Term</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P05</td><td>Indexed Universal Life (Eclipse IUL)</td><td>ICC19-20204</td><td>Individual Permanent</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P06</td><td>Survivorship IUL</td><td>ICC19-20202</td><td>Individual Permanent</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P07</td><td>Variable Universal Life (Premier VUL)</td><td>ICC22-20258</td><td>Individual Permanent</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P08</td><td>Whole Life Insurance</td><td>ICC18-20149/20150</td><td>Individual Permanent</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P09</td><td>Universal Life Insurance</td><td>ICC16-20074</td><td>Individual Permanent</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P10</td><td>Group Term Life + AD&D</td><td>20-12345/22-12345</td><td>Group</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>P11</td><td>Group Universal Life (GUL)</td><td>14-32100</td><td>Group</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R01</td><td>Accelerated Death Benefit — Terminal Illness</td><td>ICC16-20058</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R02</td><td>Accelerated Death Benefit — Chronic Illness</td><td>ICC16-20057</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R03</td><td>Waiver of Premium</td><td>ICC15-20040</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R04</td><td>Term Insurance Agreement</td><td>SL-09-944.31</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R05</td><td>Guaranteed Insurability Option</td><td>ICC09-915</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R06</td><td>Overloan Protection Agreement</td><td>ICC16-20081</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+<tr><td>R07</td><td>Early Values Agreement</td><td>ICC13-939</td><td>Rider</td><td style="font-size:0.72rem; color:var(--light)">Demo</td></tr>
+</table>
+
+<div class="callout green">
+<p><strong>Key TX vs CA differences in policy files:</strong> California REQUIRES domestic partner coverage for group policies (P10, P11) — Texas does not. CA has Proposition 103 rate review, PBR bulletins, Cal-COBRA, SB 263 annuity suitability, and community property laws. TX has TX State Securities Board oversight for VUL (P07), different nonforfeiture standards, and SB 622 legislative changes. These regulatory differences are accurate and industry-standard.</p>
+</div>
+</div>
+
+<!-- 3. CHROMADB INDEXING -->
+<div class="section" id="chromadb">
+<div class="section-header">
+<div class="section-num purple">3</div>
+<h2>ChromaDB Vector Indexing</h2>
+</div>
+
+<p style="font-size:0.92rem; color:var(--muted); margin-bottom:1rem;">ChromaDB is a vector database that converts text into numerical representations (embeddings) and enables similarity-based search. It's used to find which policy documents are related to a given regulation.</p>
+
+<div class="card">
+<div class="card-header">How Policy Indexing Works</div>
+<p><strong>Embedding model:</strong> <code>all-MiniLM-L6-v2</code> — a lightweight sentence transformer that runs locally on CPU. No API cost, no external calls. It converts text into a 384-dimensional vector.</p>
+<p style="margin-top:0.5rem"><strong>Chunking strategy:</strong> Each of the 18 policy files is split into exactly 3 chunks based on the section markers in the file:</p>
+<ul style="margin-top:0.4rem">
+<li><strong>GENERAL chunk</strong> — product description, face amounts, terms, features</li>
+<li><strong>TX chunk</strong> — Texas-specific compliance requirements</li>
+<li><strong>CA chunk</strong> — California-specific compliance requirements</li>
+</ul>
+<p style="margin-top:0.5rem"><strong>Total indexed:</strong> 18 policies × 3 chunks = <strong>54 chunks</strong> stored in ChromaDB</p>
+<p style="margin-top:0.5rem"><strong>Metadata per chunk:</strong> Each chunk carries metadata — policy_id (e.g., P01), policy_name, form_number, and section (GENERAL/TX/CA). This metadata is returned alongside search results so the agent knows exactly which policy and which section matched.</p>
+<p style="margin-top:0.5rem"><strong>Persistence:</strong> The ChromaDB index is saved to disk. Once indexed, it doesn't need to be re-created.</p>
+</div>
+
+<div class="card">
+<div class="card-header">How the Impact Agent Uses ChromaDB</div>
+<p>When the Impact Agent processes a relevant regulation (e.g., "New OFAC sanctions requirements for financial institutions"), it:</p>
+<ol>
+<li>Takes the regulation title + text and sends it to ChromaDB as a search query</li>
+<li>ChromaDB converts the query into a 384-dimensional vector using the same embedding model</li>
+<li>ChromaDB performs cosine similarity search across all 54 policy chunks and returns the top 10 most similar chunks</li>
+<li>The returned chunks might include: P09 Universal Life (OFAC sanctions clause), P05 IUL (compliance section), R06 Overloan Protection (general provisions), etc.</li>
+<li>The agent sends both the regulation AND the matched policy chunks to Claude AI</li>
+<li>Claude confirms which policies are truly affected and identifies the specific clauses — eliminating false positives from the vector search</li>
+</ol>
+<p style="margin-top:0.5rem">This two-stage approach (vector search → AI confirmation) combines the speed of vector search with the accuracy of AI judgment.</p>
+</div>
+</div>
+
+<!-- 4. SEVERITY CLASSIFICATION -->
+<div class="section" id="severity">
+<div class="section-header">
+<div class="section-num red">4</div>
+<h2>Severity Classification — How the AI Decides</h2>
+</div>
+
+<p style="font-size:0.92rem; color:var(--muted); margin-bottom:1rem;">The Filter Agent sends each regulation to Claude AI along with a structured prompt that defines exactly how severity should be assigned. The prompt contains a classification rubric that Claude follows when analyzing each regulation:</p>
+
+<div class="card">
+<div class="card-header">Severity Classification Rubric (from the AI prompt)</div>
+<table class="sev-table">
+<tr><th style="width:120px">Severity</th><th style="width:280px">Criteria (what triggers this level)</th><th>Examples</th></tr>
+<tr>
+<td><span class="sev-badge sev-critical">CRITICAL</span></td>
+<td>Direct regulatory mandate requiring <strong>immediate</strong> policy form changes, filing deadlines, or sanctions compliance. Has a specific effective date. Non-compliance carries penalties or enforcement action.</td>
+<td>
+<ul style="padding-left:1rem; margin:0">
+<li>OFAC SDN list updates (sanctions compliance — all policies affected immediately)</li>
+<li>New state law with specific effective date requiring form re-filing</li>
+<li>Emergency TDI/CDI bulletins with compliance deadlines</li>
+<li>Final rules on nonforfeiture standard changes</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="sev-badge sev-high">HIGH</span></td>
+<td>Significant regulatory change that will <strong>likely require</strong> policy amendments, new filings, or process changes within 6–12 months. Not yet effective but impact is certain.</td>
+<td>
+<ul style="padding-left:1rem; margin:0">
+<li>New suitability rules for annuity/life products (SB 263)</li>
+<li>Changes to nonforfeiture calculation standards</li>
+<li>New disclosure requirements for illustrations</li>
+<li>Legislative changes enacted but not yet effective (SB 622, SB 1238)</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="sev-badge sev-medium">MEDIUM</span></td>
+<td>Regulatory update that <strong>may require monitoring</strong> or minor adjustments but no immediate action. Proposed rules still open for comment, or guidance that clarifies existing requirements.</td>
+<td>
+<ul style="padding-left:1rem; margin:0">
+<li>Proposed rules open for public comment (not yet final)</li>
+<li>Guidance bulletins clarifying existing regulations</li>
+<li>NAIC model law updates under consideration</li>
+<li>Industry studies or data collection requests</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><span class="sev-badge sev-low">LOW</span></td>
+<td><strong>Informational or tangentially related</strong> — good to know for awareness but no compliance action needed. Does not directly affect the carrier's policy forms or operations.</td>
+<td>
+<ul style="padding-left:1rem; margin:0">
+<li>Enforcement actions against other carriers (industry awareness)</li>
+<li>Research studies on insurance markets</li>
+<li>Agency information collection notices</li>
+<li>Other carriers' form filing approvals or denials</li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+
+<div class="callout">
+<p><strong>How the prompt works:</strong> The Filter Agent sends this rubric as part of the system prompt to Claude AI for every regulation. Claude reads the regulation's title and abstract, applies the rubric, and returns a JSON response with: <code>relevant</code> (true/false), <code>severity</code> (critical/high/medium/low), <code>state</code> (TX/CA/BOTH), and <code>reason</code> (explanation of why it classified this way). The classification is AI judgment informed by the rubric — not a keyword-matching rules engine.</p>
+</div>
+</div>
+
+<!-- 5. AGENTS & DATA FLOW -->
+<div class="section" id="agents">
+<div class="section-header">
+<div class="section-num orange">5</div>
+<h2>5-Agent Pipeline & Data Flow</h2>
+</div>
+
+<p style="font-size:0.92rem; color:var(--muted); margin-bottom:1rem;">The system uses 5 custom Python agents. No external agentic framework (like CrewAI or LangChain agents) is used — all agents are hand-written for full control over prompts, error handling, and cost tracking. Three agents use Claude AI via the Anthropic API, two are pure Python logic. Below, each agent is explained with the data it saves.</p>
+
+<!-- AGENT 1: CRAWL -->
+<div class="agent-card no-ai">
+<h3>Agent 1: Crawl Agent <span class="tag tag-blue">No AI</span></h3>
+<p><strong>Purpose:</strong> Orchestrates all 4 data scrapers and collects regulatory data from external sources.</p>
+<p><strong>Scrapers it runs:</strong></p>
+<ul>
+<li><strong>Federal Register API</strong> — REST API, 12 search terms, paginated. Fetches title, abstract, date, agency, URL. → <strong>3,367 documents</strong></li>
+<li><strong>TDI Bulletins (Texas)</strong> — HTML scraping from TDI website, years 2021–2026. → <strong>91 bulletins</strong></li>
+<li><strong>CDI Bulletins (California)</strong> — HTML scraping from CDI website, bulletins + notices. → <strong>74 items</strong></li>
+<li><strong>OFAC SDN List</strong> — CSV download from US Treasury. 18,713 entries parsed into 1 snapshot record. → <strong>1 record</strong></li>
+</ul>
+</div>
+
+<p style="font-weight:600; color:var(--navy); margin:0.8rem 0 0.5rem;">Data saved after Crawl Agent (regulations table):</p>
+<table class="sample-table">
+<tr><th>id</th><th>source</th><th>title</th><th>published_date</th><th>state</th><th>severity</th><th>status</th></tr>
+<tr><td>1</td><td>federal_register</td><td>Notice of OFAC Sanctions Actions</td><td>2026-02-26</td><td>—</td><td>—</td><td>pending</td></tr>
+<tr><td>2</td><td>federal_register</td><td>Rule on Unfair or Deceptive Rental Housing Fee Practices</td><td>2026-03-13</td><td>—</td><td>—</td><td>pending</td></tr>
+<tr><td>3</td><td>federal_register</td><td>Medicare Program; Hospital Outpatient Prospective Payment</td><td>2025-11-01</td><td>—</td><td>—</td><td>pending</td></tr>
+<tr><td>4</td><td>tdi</td><td>TDI B-0014-25: Compliance with Senate Bill 1238</td><td>2025-03-10</td><td>—</td><td>—</td><td>pending</td></tr>
+<tr><td>5</td><td>cdi</td><td>CDI Bulletin 2021-8: California Supreme Court Decision Impact</td><td>2021-09-15</td><td>—</td><td>—</td><td>pending</td></tr>
+<tr><td>6</td><td>ofac</td><td>OFAC SDN List Snapshot — 18713 entries as of 2026-03-14</td><td>2026-03-14</td><td>—</td><td>—</td><td>pending</td></tr>
+</table>
+<p style="font-size:0.76rem; color:var(--light); margin-top:0.3rem; margin-bottom:1.5rem;">Note: state, severity, and status are blank/pending at this stage — they will be filled by the Filter Agent.</p>
+
+<!-- AGENT 2: COMPARE -->
+<div class="agent-card no-ai">
+<h3>Agent 2: Compare Agent <span class="tag tag-blue">No AI</span></h3>
+<p><strong>Purpose:</strong> Prevents duplicate records when scrapers run multiple times. Each regulation has a unique source ID (Federal Register document number, TDI bulletin number, etc.). Before inserting a new record, the Compare Agent checks if that source ID already exists. Only genuinely new items are inserted.</p>
+<p><strong>Why this matters:</strong> In a real scenario, scrapers run daily. Without deduplication, the same regulation would be inserted every day.</p>
+</div>
+
+<!-- AGENT 3: FILTER -->
+<div class="agent-card" style="border-left-color:var(--accent)">
+<h3>Agent 3: Filter Agent <span class="tag tag-orange">Uses Claude AI</span></h3>
+<p><strong>AI Model:</strong> Claude Sonnet 4 via Anthropic API</p>
+<p><strong>Purpose:</strong> Classifies each regulation as relevant or not relevant to life insurance. For relevant items, assigns severity and determines state applicability using the rubric described in Section 4.</p>
+<p><strong>Process:</strong> Takes each regulation's title + abstract → sends to Claude with the classification prompt → Claude returns JSON with relevant, severity, state, reason → agent updates the database.</p>
+</div>
+
+<p style="font-weight:600; color:var(--navy); margin:0.8rem 0 0.5rem;">Data saved after Filter Agent (regulations table updated):</p>
+<table class="sample-table">
+<tr><th>id</th><th>source</th><th>title</th><th>severity</th><th>state</th><th>status</th><th>filter_reason</th></tr>
+<tr><td>1</td><td>federal_register</td><td>Notice of OFAC Sanctions Actions</td><td style="color:var(--red); font-weight:600">critical</td><td>BOTH</td><td style="color:var(--green)">classified</td><td>Directly impacts sanctions compliance for all life insurance policies</td></tr>
+<tr><td>2</td><td>federal_register</td><td>Rule on Unfair or Deceptive Rental Housing Fee Practices</td><td style="color:var(--light)">low</td><td>BOTH</td><td style="color:var(--red)">rejected</td><td>Relates to housing/rental — not relevant to life insurance</td></tr>
+<tr><td>3</td><td>federal_register</td><td>Medicare Program; Hospital Outpatient Prospective Payment</td><td style="color:var(--light)">—</td><td>—</td><td style="color:var(--red)">rejected</td><td>Medicare/hospital regulation — not applicable to life insurance</td></tr>
+<tr><td>4</td><td>tdi</td><td>TDI B-0014-25: Compliance with Senate Bill 1238</td><td style="color:var(--orange); font-weight:600">high</td><td>TX</td><td style="color:var(--green)">classified</td><td>TX legislative change requiring compliance action for life insurers</td></tr>
+<tr><td>5</td><td>cdi</td><td>CDI Bulletin 2021-8: CA Supreme Court Decision Impact</td><td style="color:var(--accent); font-weight:600">medium</td><td>CA</td><td style="color:var(--green)">classified</td><td>Court decision may affect CA life insurance practices</td></tr>
+</table>
+<p style="font-size:0.76rem; color:var(--light); margin-top:0.3rem; margin-bottom:1.5rem;">Rows 2 and 3 were rejected — housing and Medicare regulations are not relevant. Rows 1, 4, 5 were classified with severity and state.</p>
+
+<!-- AGENT 4: IMPACT -->
+<div class="agent-card green">
+<h3>Agent 4: Impact Agent <span class="tag tag-orange">Uses Claude AI</span></h3>
+<p><strong>AI Model:</strong> Claude Sonnet 4 via Anthropic API</p>
+<p><strong>Purpose:</strong> For each relevant regulation, searches ChromaDB to find similar policy chunks, then sends both the regulation and matched policies to Claude to confirm which policies are truly affected.</p>
+<p><strong>Process:</strong> Regulation text → ChromaDB search (top 10 matches) → send regulation + matched policy chunks to Claude → Claude returns JSON array of affected policies with clauses → save each as a row in policy_impacts table.</p>
+</div>
+
+<p style="font-weight:600; color:var(--navy); margin:0.8rem 0 0.5rem;">Data saved after Impact Agent (new table: policy_impacts):</p>
+<table class="sample-table sample-table-green">
+<tr><th>regulation_id</th><th>policy_id</th><th>policy_name</th><th>affected_state</th><th>affected_clause</th><th>impact_description</th></tr>
+<tr><td>1 (OFAC Sanctions)</td><td>P07</td><td>Variable Universal Life</td><td>BOTH</td><td>OFAC sanctions compliance clause</td><td>Must update sanctions screening procedures</td></tr>
+<tr><td>1 (OFAC Sanctions)</td><td>P09</td><td>Universal Life Insurance</td><td>BOTH</td><td>OFAC sanctions compliance clause</td><td>Must update sanctions screening procedures</td></tr>
+<tr><td>1 (OFAC Sanctions)</td><td>R06</td><td>Overloan Protection</td><td>TX</td><td>OFAC sanctions compliance clause</td><td>TX-specific sanctions compliance update needed</td></tr>
+<tr><td>4 (TDI SB 1238)</td><td>P01</td><td>Access Term Life</td><td>TX</td><td>TX continuation requirements</td><td>Must update TX policy language per SB 1238</td></tr>
+<tr><td>4 (TDI SB 1238)</td><td>P10</td><td>Group Term Life + AD&D</td><td>TX</td><td>TX group provisions</td><td>Group policy TX section needs SB 1238 amendments</td></tr>
+<tr><td>5 (CDI Bulletin)</td><td>P05</td><td>Eclipse IUL</td><td>CA</td><td>CA market conduct section</td><td>CDI guidance affects CA illustration practices</td></tr>
+</table>
+<p style="font-size:0.76rem; color:var(--light); margin-top:0.3rem; margin-bottom:1.5rem;">One regulation can affect multiple policies. The OFAC sanctions regulation above created 3 impact records (3 policies affected). Total across all regulations: 880 impact records.</p>
+
+<!-- AGENT 5: DRAFT -->
+<div class="agent-card purple">
+<h3>Agent 5: Draft Agent <span class="tag tag-orange">Uses Claude AI</span></h3>
+<p><strong>AI Model:</strong> Claude Sonnet 4 via Anthropic API</p>
+<p><strong>Purpose:</strong> Generates a full compliance memo for each regulation that has at least one policy impact.</p>
+<p><strong>Process:</strong> Fetches regulation + all its policy impacts from database → sends to Claude with memo generation prompt → Claude generates structured memo with 6 sections → save memo text to memos table.</p>
+<p><strong>The 6 memo sections:</strong></p>
+<ol>
+<li><strong>Regulation Summary</strong> — plain English explanation of what changed</li>
+<li><strong>Affected Policies</strong> — list of specific policies with form numbers and states</li>
+<li><strong>Texas Action Items</strong> — what the TX compliance team needs to do</li>
+<li><strong>California Action Items</strong> — what the CA compliance team needs to do</li>
+<li><strong>Deadline</strong> — when compliance is required</li>
+<li><strong>Recommended Next Steps</strong> — coordinate with Legal, file amendments, etc.</li>
+</ol>
+<p><strong>Skipped items:</strong> If a regulation was classified as relevant but the Impact Agent found no specific policy impacts, no memo is generated.</p>
+</div>
+
+<p style="font-weight:600; color:var(--navy); margin:0.8rem 0 0.5rem;">Data saved after Draft Agent (new table: memos):</p>
+<table class="sample-table sample-table-purple">
+<tr><th>regulation_id</th><th>memo_text (abbreviated)</th></tr>
+<tr><td>1 (OFAC Sanctions)</td><td><strong>REGULATION SUMMARY:</strong> FinCEN has proposed a special measure designating Mbaer Merchant Bank AG... <strong>AFFECTED POLICIES:</strong> P07 Variable UL, P09 Universal Life, R06 Overloan Protection... <strong>TX ACTION ITEMS:</strong> Update OFAC compliance language in all seven affected TX policies, review premium payment processing... <strong>CA ACTION ITEMS:</strong> Update OFAC compliance language in two affected CA policies... <strong>DEADLINE:</strong> Monitor for final rule... <strong>NEXT STEPS:</strong> Coordinate with Legal and Operations...</td></tr>
+<tr><td>4 (TDI SB 1238)</td><td><strong>REGULATION SUMMARY:</strong> TDI Bulletin B-0014-25 requires compliance with Senate Bill 1238... <strong>AFFECTED POLICIES:</strong> P01 Access Term Life, P10 Group Term Life... <strong>TX ACTION ITEMS:</strong> Update TX policy language per SB 1238, file amendments with TDI... <strong>CA ACTION ITEMS:</strong> No CA action required (TX-only regulation)... <strong>DEADLINE:</strong> Per SB 1238 effective date...</td></tr>
+</table>
+<p style="font-size:0.76rem; color:var(--light); margin-top:0.3rem; margin-bottom:1.5rem;">Total: 181 memos generated. Each memo is a multi-paragraph document with state-specific action items. Memos can be downloaded from the dashboard.</p>
+</div>
+
+<!-- 6. DASHBOARD -->
+<div class="section" id="dashboard">
+<div class="section-header">
+<div class="section-num green">6</div>
+<h2>Dashboard — 5 Pages</h2>
+</div>
+
+<p style="font-size:0.92rem; color:var(--muted); margin-bottom:1rem;">The dashboard is built with Streamlit (Python web framework) + Plotly (interactive charts). All data is read directly from the SQLite database. No Claude API calls happen when viewing the dashboard — it's a read-only visualization layer over pre-computed results.</p>
+
+<div class="card">
+<div class="card-header">Page 1: Home <span class="tag tag-blue">Executive Overview</span></div>
+<p><strong>What it shows:</strong> The first page a viewer sees. Provides a high-level summary of the entire analysis.</p>
+<ul>
+<li><strong>KPI cards row:</strong> Large metric cards showing total tracked, relevant to life insurance, policy impacts, memos generated, and policies affected</li>
+<li><strong>Severity donut chart:</strong> Breakdown of relevant regulations by severity — critical (red), high (orange), medium (blue), low (gray). Gives an instant sense of urgency.</li>
+<li><strong>State comparison bar chart:</strong> How many regulations affect TX only, CA only, or BOTH states</li>
+<li><strong>Source distribution bar chart:</strong> How many relevant regulations came from each data source</li>
+<li><strong>Recent critical & high items table:</strong> Most recent urgent regulations with date, title, state, severity, and source</li>
+</ul>
+<p style="margin-top:0.5rem"><strong>Sidebar filters:</strong> State (All/TX/CA), Severity (multi-select), Source (multi-select). Changing any filter updates all charts and tables instantly.</p>
+</div>
+
+<div class="card">
+<div class="card-header">Page 2: Timeline <span class="tag tag-green">Regulatory Change Over Time</span></div>
+<p><strong>What it shows:</strong> A 5-year interactive bar chart showing when regulatory changes occurred.</p>
+<ul>
+<li><strong>Quarterly stacked bar chart:</strong> Quarters on X axis, regulation count on Y axis. Bars stacked and color-coded by severity, source, or state depending on toggle</li>
+<li><strong>"Color by" toggle:</strong> Switch between Severity view, Source view, or State view without changing the data — just the coloring perspective</li>
+<li><strong>Summary metrics:</strong> Total in view, critical count, high count, average per quarter</li>
+<li><strong>Yearly breakdown table:</strong> One row per year with severity counts</li>
+</ul>
+<p style="margin-top:0.5rem"><strong>Performance:</strong> Data is cached for 10 minutes — subsequent page loads are instant.</p>
+</div>
+
+<div class="card">
+<div class="card-header">Page 3: Impact Matrix <span class="tag tag-purple">Policy-Level Analysis</span></div>
+<p><strong>What it shows:</strong> Which of the 18 policies face the most regulatory compliance pressure. The most valuable page for compliance teams.</p>
+<ul>
+<li><strong>Most affected policies bar chart:</strong> Horizontal bars ranking all policies by number of impacts. Longest bar = highest priority for compliance work</li>
+<li><strong>TX vs CA comparison:</strong> Two side-by-side charts showing impact counts per policy per state. Shows which state drives more work for each product</li>
+<li><strong>Impact heatmap:</strong> Color grid with policies × quarters. Darker = more impacts. Reveals temporal patterns</li>
+<li><strong>Policy detail expanders:</strong> Click any policy to see every regulation affecting it with state, clause, and impact description</li>
+</ul>
+</div>
+
+<div class="card">
+<div class="card-header">Page 4: Compliance Memos <span class="tag tag-orange">AI-Generated Action Items</span></div>
+<p><strong>What it shows:</strong> Full text of every AI-generated compliance memo. The proof of AI value.</p>
+<ul>
+<li><strong>Memo selector dropdown:</strong> All memos listed with severity/state badges and date. Select any to view</li>
+<li><strong>Memo header:</strong> Severity badge, state badge, source, date</li>
+<li><strong>Full memo display:</strong> Complete structured memo — Regulation Summary, Affected Policies, TX Action Items, CA Action Items, Deadline, Next Steps</li>
+<li><strong>Affected policies sidebar:</strong> Policy cards on the right showing which products are affected</li>
+<li><strong>Download button:</strong> Save memo as text file for sharing with compliance teams</li>
+</ul>
+<p style="margin-top:0.5rem"><strong>Sidebar filters:</strong> State (All/TX/CA/BOTH) and Severity (multi-select) to narrow down the memo list.</p>
+</div>
+
+<div class="card">
+<div class="card-header">Page 5: Data Explorer <span class="tag tag-red">Full Transparency</span></div>
+<p><strong>What it shows:</strong> Complete access to all underlying data and processing statistics.</p>
+<ul>
+<li><strong>Processing funnel:</strong> Visual funnel showing data flow — total scraped → relevant → policy impacts → memos. Shows the filtering ratio at each stage</li>
+<li><strong>Data by source:</strong> Metric cards showing relevant regulation counts per source</li>
+<li><strong>API usage statistics:</strong> Per-agent breakdown of API calls, tokens, cost, and time. Full transparency on AI resource consumption</li>
+<li><strong>Searchable regulation table:</strong> Full table of all regulations with text search. Status column shows whether each item was relevant or rejected — making AI decisions transparent and auditable</li>
+</ul>
+</div>
+</div>
+
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+<p>Regulatory Change Monitor Agent — Technical Documentation</p>
+<p style="margin-top:0.3rem">US Life Insurance | Texas + California | March 2026</p>
+<p style="margin-top:0.3rem">Powered by Claude AI + ChromaDB + Streamlit</p>
+</div>
+
+</body>
+</html>
