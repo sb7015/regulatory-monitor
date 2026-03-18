@@ -1,0 +1,16 @@
+Regulatory Change Monitor — Agentic AI for Insurance Compliance
+
+Hi Team,
+
+Attaching a 2-slide executive brief on the Regulatory Change Monitor — an agentic AI solution we've built for life insurance compliance.
+
+The problem: Insurance carriers face hundreds of regulatory changes monthly across federal and state sources. Compliance teams spend weeks manually reviewing each change against every policy form — a process that doesn't scale.
+
+What we built: A multi-agent AI system that automatically scrapes regulatory sources, classifies relevance, maps impacts to specific policy clauses, and generates compliance memos with state-specific action items. Weeks of manual work reduced to minutes.
+
+Live demo: http://100.53.24.188:8501
+
+The attached deck covers the problem statement and how the 4-agent architecture works. Happy to walk through it at your convenience.
+
+Best,
+Sanjib
